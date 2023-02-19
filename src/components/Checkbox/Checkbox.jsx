@@ -12,8 +12,6 @@ class Checkbox extends React.Component {
     super(props);
   }
 
-
-
   render() {
     return (
       <div className={b()} onClick={this.props.onClick}>

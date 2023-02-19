@@ -1,4 +1,9 @@
 import React from "react";
+import block from "bem-cn";
+
+import "./Input.scss";
+
+const b = block("input");
 
 class Input extends React.Component {
   constructor(props) {
@@ -6,7 +11,7 @@ class Input extends React.Component {
   }
 
   render() {
-    return <input type={this.props.type}></input>;
+    return <input {...this.props} className={b()}></input>;
   }
 }
 

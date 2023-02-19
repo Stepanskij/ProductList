@@ -3,6 +3,7 @@ import block from "bem-cn";
 
 import Button from "components/Button";
 import Checkbox from "components/Checkbox";
+import Input from "components/Input";
 
 import "./UiKit.scss";
 
@@ -13,7 +14,6 @@ class UiKit extends React.Component {
     super(props);
 
     this.state = {
-      value1: "qwerty",
       isChecked1: false,
     };
   }
@@ -37,7 +37,13 @@ class UiKit extends React.Component {
           </Button>
         </div>
         <div className={b("checkbox-container")}>
-          <Checkbox isChecked={this.state.isChecked1} onClick={this.handleCheckbox1Click}/>
+          <Checkbox
+            isChecked={this.state.isChecked1}
+            onClick={this.handleCheckbox1Click}
+          />
+        </div>
+        <div className={b("input-container")}>
+          <Input type="text" />
         </div>
       </div>
     );
