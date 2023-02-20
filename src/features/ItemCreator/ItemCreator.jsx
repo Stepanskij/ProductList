@@ -1,19 +1,16 @@
 import React from "react";
 import block from "bem-cn";
 
-import ProductItem from "features/ProductItem";
+import Input from "components/Input";
+import Button from "components/Button";
 
-import "./ProductList.scss";
+import "./ItemCreator.scss";
 
-const b = block("product-list");
+const b = block("item-creator");
 
-class ProductList extends React.Component {
+class ItemCreator extends React.Component {
   constructor(props) {
     super(props);
-
-    this.state = {
-      list: JSON.parse(localStorage.getItem("productList")),
-    };
   }
 
   handleItemClick = (id) => {
@@ -40,16 +37,15 @@ class ProductList extends React.Component {
   render() {
     return (
       <div className={b()}>
-        {this.state.list.map((product) => {
-          return (
-            <div className={b("item")} key={product.id}>
-              <ProductItem item={product} onClick={this.handleItemClick} />
-            </div>
-          );
-        })}
+        <div className={b("input")}>
+          <Input />
+        </div>
+        <div className={b("button")}>
+          <Button />
+        </div>
       </div>
     );
   }
 }
 
-export default ProductList;
+export default ItemCreator;
