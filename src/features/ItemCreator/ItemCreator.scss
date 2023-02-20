@@ -1,4 +1,15 @@
 .item-creator {
+  width: 500px;
   display: flex;
   align-items: center;
+
+  &__input {
+    height: 20px;
+  }
+
+  &__button {
+    width: 70px;
+    height: 15px;
+    margin-left: 10px;
+  }
 }

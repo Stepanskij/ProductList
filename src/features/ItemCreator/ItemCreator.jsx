@@ -11,37 +11,32 @@ const b = block("item-creator");
 class ItemCreator extends React.Component {
   constructor(props) {
     super(props);
+
+    this.state = {
+      inputValue: "",
+    };
   }
 
-  handleItemClick = (id) => {
-    this.setState(
-      (preState) => {
-        return {
-          ...preState,
-          list: preState.list.map((item) => {
-            if (item.id === id) {
-              return { ...item, checked: !item.checked };
-            }
-
-            return item;
-          }),
-        };
-      },
-      () => {
-        const productList = JSON.stringify(this.state.list);
-        localStorage.setItem("productList", productList);
-      }
-    );
+  handleInputChange = (e) => {
+    const value = e.target.value;
+    this.setState((preState) => {
+      return { ...preState, inputValue: `${value}` };
+    });
   };
 
   render() {
     return (
       <div className={b()}>
         <div className={b("input")}>
-          <Input />
+          <Input
+            value={this.state.inputValue}
+            onChange={this.handleInputChange}
+          />
         </div>
         <div className={b("button")}>
-          <Button />
+          <Button
+            onClick={() => this.props.buttonClick(this.state.inputValue)}
+          />
         </div>
       </div>
     );
