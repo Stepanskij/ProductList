@@ -1,11 +1,24 @@
 .product-list {
+  display: flex;
+  flex-direction: column;
+
   &__item-creator {
-    margin-bottom: 10px;
   }
-  
+
   &__item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    user-select: none;
+    background-color: rgb(194, 196, 201);
+    box-shadow: 0 2px 7px 0 #2e1b446b;
+
     &:not(:last-child) {
       margin-bottom: 10px;
     }
+  }
+
+  &__delete-button {
+    margin-left: 30px;
   }
 }

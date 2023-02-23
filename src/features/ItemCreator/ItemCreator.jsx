@@ -36,7 +36,10 @@ class ItemCreator extends React.Component {
         <div className={b("button")}>
           <Button
             onClick={() => this.props.buttonClick(this.state.inputValue)}
-          />
+            /* radius={15} */
+          >
+            Add
+          </Button>
         </div>
       </div>
     );

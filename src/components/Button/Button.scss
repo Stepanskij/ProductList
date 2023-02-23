@@ -4,8 +4,8 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  padding: 7px;
   background: linear-gradient(180deg, #bc9cff 0%, #8ba4f9 100%);
-  border-radius: 22px;
   font-weight: 700;
   font-size: 12px;
   line-height: 15px;
@@ -16,7 +16,19 @@
   &:active {
     transform: translateY(2px);
   }
-  &:hover{
-    box-shadow:0 5px 5px rgba(0, 0, 0, 0.514);
+  &:hover {
+    box-shadow: 0 5px 5px rgba(0, 0, 0, 0.514);
+  }
+
+  &_radius {
+    &_5 {
+      border-radius: 5px;
+    }
+    &_10 {
+      border-radius: 10px;
+    }
+    &_15 {
+      border-radius: 15px;
+    }
   }
 }

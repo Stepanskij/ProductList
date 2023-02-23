@@ -2,6 +2,9 @@ import React from "react";
 import block from "bem-cn";
 
 import ProductList from "features/ProductList";
+import Modal from "modules/Modal";
+
+import "./App.scss";
 
 const b = block("app");
 

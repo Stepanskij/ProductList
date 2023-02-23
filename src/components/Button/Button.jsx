@@ -12,7 +12,10 @@ class Button extends React.Component {
 
   render() {
     return (
-      <button className={b()} {...this.props}>
+      <button
+        className={b({ radius: this.props.radius || "5" })}
+        {...this.props}
+      >
         {this.props.children}
       </button>
     );
