@@ -8,8 +8,8 @@ const { BundleAnalyzerPlugin } = require("webpack-bundle-analyzer");
 const webpack = require("webpack");
 
 const PATHS = {
-  src: path.resolve(__dirname, "src"),
-  dist: path.resolve(__dirname, "dist"),
+  src: path.resolve(__dirname, "..", "src"),
+  dist: path.resolve(__dirname, "..", "dist"),
 };
 
 /* const proxy = ''; */
@@ -127,7 +127,7 @@ module.exports = () => ({
     }), */
   ],
   resolve: {
-    modules: ["node_modules", path.resolve(__dirname, "src")],
+    modules: ["node_modules", path.resolve(__dirname, "..", "src")],
     extensions: [".ts", ".tsx", ".js", ".json", ".jsx", ".css"],
   },
   devServer: {
